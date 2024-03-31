@@ -29,7 +29,7 @@
     count++;
     }
     else{
-        printf("Maximum count reached");
+        printf("Maximum count reached\n");
     }
 }
 
