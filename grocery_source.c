@@ -54,6 +54,28 @@ void customer_entry()
     }
 }
 
+void editItem() 
+{
+    int index;
+    for(int i = 0; i < count; i++) {
+        printf("%d)%s---%.2f---%d\n", i + 1, item[i].name, item[i].price, item[i].quantity);
+    }
+    printf("Enter the item number you want to edit : ");
+    scanf("%d", &index);
+
+    if (index >= 0 && index < count) {
+        printf("Enter new item name: ");
+        scanf("%s", item[index-1].name);
+        printf("Enter new item price: ");
+        scanf("%f", &item[index-1].price);
+        printf("Enter new item quantity: ");
+        scanf("%d", &item[index-1].quantity);
+    } 
+    else {
+        printf("Invalid item index.\n");
+    }
+}
+
 void billing()
 {
     struct purchase 
