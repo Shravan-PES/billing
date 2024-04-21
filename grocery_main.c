@@ -25,10 +25,15 @@ int main()
             }
             case 3:
             {
+                 edit_item();
+                 break;
+            }
+            case 4:
+            {
                 billing();
                 break;
             }
-            case 4:
+            case 5:
             {
                 printf("Thank You!\n Visit Again!\n\n");
                 break;
