@@ -1,8 +1,11 @@
 #include "grocery_header.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
     int c;
+
     while(c!=4)
     {
         printf("What do you like to do:\n 1.Item entry\n 2.Costumer entry\n 3.Compute and Print Bill\n 4.Quit\n\n");
