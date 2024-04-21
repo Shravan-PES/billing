@@ -131,11 +131,12 @@ void billing()
     char C = getch();
     if (C == 'y') {
         printf("-------Grocery Shop--------\n");
+        printf("Name:%s\n",name);
         printf("ITEM NAME\tQUANTITY\tRATE\t\tTOTAL\n");
         float gst = 0.08;
         float grand = 0;
         for (int i = 0; i < t; i++) {
-            float itemTotal = item[item_num - 1].price * New[i].quant; // Calculate total cost for each item
+            float itemTotal = item[item_num - 1].price * New[i].quant; 
             printf("%s\t\t%d\t\t%.2f\t\t%.2f\n", New[i].nam, New[i].quant, item[item_num - 1].price, itemTotal);
             grand += itemTotal;
         }
