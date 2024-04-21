@@ -54,7 +54,7 @@ void customer_entry()
     }
 }
 
-void editItem() 
+void edit_Item() 
 {
     int index;
     for(int i = 0; i < count; i++) {
