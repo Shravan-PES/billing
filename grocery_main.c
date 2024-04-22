@@ -6,7 +6,7 @@ int main()
 {
     int c;
 
-    while(c!=4)
+    while(c!=5)
     {
         printf("What do you like to do:\n 1.Item entry\n 2.Costumer entry\n 3.Edit Item\n 4.Compute and Print Bill\n 5.Quit\n\n");
         printf("Enter your option- ");
