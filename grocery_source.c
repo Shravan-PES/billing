@@ -138,7 +138,7 @@ void billing()
         float gst = 0.08;
         float grand = 0;
         for (int i = 0; i < t; i++) {
-            float itemTotal = item[item_num - 1].price * New[i].quant; 
+            float itemTotal = New[i].cost * New[i].quant; 
             printf("%s\t\t%d\t\t%.2f\t\t%.2f\n", New[i].nam, New[i].quant, New[i].cost, itemTotal);
             grand += itemTotal;
         }
