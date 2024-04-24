@@ -4,7 +4,22 @@
 #include <conio.h>
 #include <stdlib.h>
 
-   struct Item {
+//    struct Item {
+//     char name[50];
+//     float price;
+//     int quantity;
+// };
+
+// struct Customer {
+//     char name[50];
+//     char phone[11];
+//     char id[5];
+// };
+// struct Item item[10]={{"Books",60,20},{"Bottle",75,50},{"Pens",10,30},{"Brush",30,10},{"Soap",20,20}};
+// struct Customer customer[10]={{"Rajesh","9486726543","232"},{"Rahul","7492546186","233"},{"Sameer","8694142390","234"},{"Ajay","9446514235","235"},{"Akshay","9875562341","236"}};
+// int count = 5;
+
+struct Item {
     char name[50];
     float price;
     int quantity;
@@ -15,10 +30,10 @@ struct Customer {
     char phone[11];
     char id[5];
 };
-struct Item item[10]={{"Books",60,20},{"Bottle",75,50},{"Pens",10,30},{"Brush",30,10},{"Soap",20,20}};
-struct Customer customer[10]={{"Rajesh","9486726543","232"},{"Rahul","7492546186","233"},{"Sameer","8694142390","234"},{"Ajay","9446514235","235"},{"Akshay","9875562341","236"}};
-int count = 5;
 
+struct Item *item;
+struct Customer *customer;
+int count =5;
 void item_entry()
 {  
     printf("----------------ITEM ENTRY------------------\n");
@@ -54,7 +69,7 @@ void customer_entry()
     }
 }
 
-void edit_item() 
+void edit_item()
 {
     int index;
     for(int i = 0; i < count; i++) {
@@ -63,7 +78,7 @@ void edit_item()
     printf("Enter the item number you want to edit : ");
     scanf("%d", &index);
 
-    if (index >= 0 && index < count) {
+    if (index > 0 && index <= count) {
         printf("Enter new item name: ");
         scanf("%s", item[index-1].name);
         printf("Enter new item price: ");
@@ -82,6 +97,7 @@ void billing()
     {
         char nam[50];
         int quant;
+        float cost;
     } New[10];
     char name[20];
     printf("Enter your name- ");
@@ -116,6 +132,7 @@ void billing()
         scanf("%d", &quantity);
         strcpy(New[o].nam, item[item_num - 1].name); 
         New[o].quant = quantity; 
+        New[o].cost = item[item_num-1].price;
         o++;
         if (quantity <= item[item_num - 1].quantity) {
             item[item_num - 1].quantity -= quantity; 
@@ -137,7 +154,7 @@ void billing()
         float grand = 0;
         for (int i = 0; i < t; i++) {
             float itemTotal = item[item_num - 1].price * New[i].quant; 
-            printf("%s\t\t%d\t\t%.2f\t\t%.2f\n", New[i].nam, New[i].quant, item[item_num - 1].price, itemTotal);
+            printf("%s\t\t%d\t\t%.2f\t\t%.2f\n", New[i].nam, New[i].quant, New[i].cost, itemTotal);
             grand += itemTotal;
         }
         printf("\nTOTAL=\t%.2f\n", grand);
