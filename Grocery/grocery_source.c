@@ -4,21 +4,6 @@
 #include <conio.h>
 #include <stdlib.h>
 
-//    struct Item {
-//     char name[50];
-//     float price;
-//     int quantity;
-// };
-
-// struct Customer {
-//     char name[50];
-//     char phone[11];
-//     char id[5];
-// };
-// struct Item item[10]={{"Books",60,20},{"Bottle",75,50},{"Pens",10,30},{"Brush",30,10},{"Soap",20,20}};
-// struct Customer customer[10]={{"Rajesh","9486726543","232"},{"Rahul","7492546186","233"},{"Sameer","8694142390","234"},{"Ajay","9446514235","235"},{"Akshay","9875562341","236"}};
-// int count = 5;
-
 struct Item {
     char name[50];
     float price;
